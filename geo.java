@@ -28,6 +28,18 @@ public class geo
   length2 = Math.sqrt(Math.pow((a2-a1),b) + Math.pow((b2-b1),b));
   String s2 = Double.toString(length2);
   System.out.println("The length of the line joining the coordinates : " + length2);
-  System.out.println("The equality of lines : " + s1.equals(s2));
+  int eq = s1.compareTo(s2);
+  if(eq==0)
+  {
+   System.out.println("Length of line 1 and line 2 are equal");
+  }
+  else if(eq>0)
+  {
+   System.out.println("Length of line 1 is greater than Line 2");
+  }
+  else
+  {
+   System.out.println("Length of line 1 is smaller than Line 2");
+  }
  }
 }
